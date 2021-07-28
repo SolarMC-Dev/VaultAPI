@@ -31,7 +31,7 @@ import org.bukkit.plugin.Plugin;
  */
 public abstract class Permission {
 
-	protected static final Logger log = Logger.getLogger("Minecraft");
+	protected static final Logger log = Logger.getLogger(Permission.class.getName()); // Solar
     protected Plugin plugin = null;
 
     /**

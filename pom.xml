@@ -1,9 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.milkbowl.vault</groupId>
+
+<!-- Solar start -->
+	<parent>
+		<groupId>gg.solarmc</groupId>
+		<artifactId>solar-parent</artifactId>
+		<version>0.6.2</version>
+	</parent>
+	<groupId>gg.solarmc.vault</groupId>
+<!-- Solar end -->
 	<artifactId>VaultAPI</artifactId>
-	<version>1.7</version>
+	<version>1.7.1-SNAPSHOT</version>
 
 	<name>VaultAPI</name>
 	<description>Vault is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.
@@ -26,7 +34,11 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 	<scm>
 		<url>https://github.com/MilkBowl/VaultAPI</url>
 		<connection>scm:git:git://github.com:MilkBowl/VaultAPI.git</connection>
+<!-- Solar start
 		<developerConnection>scm:git:git@github.com:MilkBowl/VaultAPI.git</developerConnection>
+-->
+		<developerConnection>scm:git:https://github.com/SolarMC-Dev/VaultAPI.git</developerConnection>
+<!-- Solar end -->
 	</scm>
 
 	<ciManagement>
@@ -39,6 +51,7 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 		<url>https://github.com/MilkBowl/VaultAPI/issues</url>
 	</issueManagement>
 
+<!-- Solar start
 	<repositories>
 		<repository>
             <id>spigot-repo</id>
@@ -53,14 +66,17 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
       		<url>https://maven.pkg.github.com/milkbowl/github-releases</url>
     	</repository>
 	</distributionManagement>
+Solar end -->
 
 	<dependencies>
+<!-- Solar start -->
 		<dependency>
-			<groupId>org.bukkit</groupId>
-			<artifactId>bukkit</artifactId>
-			<version>${bukkitVersion}</version>
+			<groupId>gg.solarmc.paper</groupId>
+			<artifactId>solarpaper-api</artifactId>
+			<version>1.2.0</version>
 			<scope>provided</scope>
 		</dependency>
+<!-- Solar end -->
 		<!-- Test Dependency -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -80,8 +96,9 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+<!-- Solar start -->
+					<release>11</release>
+<!-- Solar end -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -117,4 +134,13 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 			</plugin>
 		</plugins>
 	</build>
+
+<!-- Solar start -->
+	<repositories>
+		<repository>
+			<id>solar-releases</id>
+			<url>https://mvn-repo.solarmc.gg/releases</url>
+		</repository>
+	</repositories>
+<!-- Solar end -->
 </project>
