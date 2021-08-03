@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 <!-- Solar start -->
@@ -11,7 +10,7 @@
 	<groupId>gg.solarmc.vault</groupId>
 <!-- Solar end -->
 	<artifactId>VaultAPI</artifactId>
-	<version>1.7.1-SNAPSHOT</version>
+	<version>1.7.1</version>
 
 	<name>VaultAPI</name>
 	<description>Vault is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.
@@ -39,7 +38,8 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 -->
 		<developerConnection>scm:git:https://github.com/SolarMC-Dev/VaultAPI.git</developerConnection>
 <!-- Solar end -->
-	</scm>
+	  <tag>1.7.1</tag>
+  </scm>
 
 	<ciManagement>
 		<system>Travis-CI</system>
