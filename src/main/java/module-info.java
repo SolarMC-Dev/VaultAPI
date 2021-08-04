@@ -6,5 +6,6 @@ module net.milkbowl.vault {
     exports net.milkbowl.vault.chat;
     exports net.milkbowl.vault.economy;
     exports net.milkbowl.vault.permission;
+    exports net.milkbowl.vault.plugin;
     provides LaunchablePlugin with VaultPlugin;
 }
